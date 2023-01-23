@@ -1,16 +1,19 @@
 import React from 'react'
 import './SideNav.scss'
+import { useProject } from '../../context/ProjectContext'
 
 export default function SideNav() {
+    const { projects } = useProject()
+    console.log(projects)
+
     return (
         <div className='sidenav'>
             <p>ALL BOARDS (2)</p>
 
             <ul>
-                <li className=''>Kanban board</li>
-                <li className=''>Kanban board</li>
-                <li className='active'>Kanban board</li>
-                <li className=''>Kanban board</li>
+                {projects.map((project) => (
+                    <li key={project.id}>{project.title}</li>
+                ))}
             </ul>
         </div>
     )
