@@ -1,0 +1,26 @@
+.board {
+    padding: 24px;
+    display: grid;
+    gap: 50px;
+    flex: 1;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    &-column {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &-title {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+
+        &-icon {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: orange;
+        }
+    }
+}
