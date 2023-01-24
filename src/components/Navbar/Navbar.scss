@@ -1,0 +1,30 @@
+.navbar {
+    background-color: var(--bg-gray);
+    padding: 30px;
+    border-bottom: 1px solid var(--bg-lines);
+    display: flex;
+    align-items: center;
+
+    &-logo-container {
+        width: 100%;
+        max-width: 280px;
+
+        h1 {
+            color: var(--text-lines);
+            font-size: 36px;
+        }
+    }
+
+    &-heading {
+        flex: 1;
+    }
+
+    button {
+        background-color: var(--primary);
+        border: none;
+        color: var(--text);
+        padding: 15px 20px;
+        cursor: pointer;
+        border-radius: 999px;
+    }
+}
