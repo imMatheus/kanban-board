@@ -1,0 +1,47 @@
+.modal {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000066;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-card {
+        padding: 32px;
+        width: min(100%, 480px);
+        background-color: var(--bg-gray);
+        border-radius: 6px;
+
+        h3 {
+            margin-bottom: 20px;
+        }
+    }
+
+    &-input-group {
+        margin-bottom: 24px;
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            display: block;
+            background-color: transparent;
+            padding: 8px 16px;
+            border: 1px solid var(--bg-lines);
+            border-radius: 6px;
+            outline: none;
+            resize: vertical;
+            max-height: 220px;
+            color: var(--text);
+
+            &:focus {
+                border-color: var(--primary);
+            }
+        }
+    }
+}
