@@ -3,7 +3,7 @@ import './SideNav.scss'
 import { useProject } from '../../context/ProjectContext'
 
 export default function SideNav() {
-    const { projects } = useProject()
+    const { projects, currentProject, changeBoard } = useProject()
     console.log(projects)
 
     return (
@@ -11,8 +11,20 @@ export default function SideNav() {
             <p>ALL BOARDS (2)</p>
 
             <ul>
-                {projects.map((project) => (
-                    <li key={project.id}>{project.title}</li>
+                {projects.map((project, index) => (
+                    <li
+                        onClick={() => {
+                            changeBoard(index)
+                        }}
+                        key={project.id}
+                        className={
+                            currentProject.id === project.id
+                                ? 'active'
+                                : undefined
+                        }
+                    >
+                        {project.title}
+                    </li>
                 ))}
             </ul>
         </div>
