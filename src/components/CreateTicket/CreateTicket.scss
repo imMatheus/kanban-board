@@ -44,4 +44,14 @@
             }
         }
     }
+
+    button {
+        background-color: var(--primary);
+        padding: 10px;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+    }
 }
