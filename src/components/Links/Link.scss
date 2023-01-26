@@ -1,0 +1,56 @@
+.links {
+    ul {
+        list-style: none;
+
+        li {
+            width: 85%;
+            padding: 15px 30px;
+            border-radius: 0px 15px 15px 0px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--text-gray);
+
+            &.active,
+            &:hover {
+                background-color: var(--text-dimmed);
+                color: var(--primary);
+            }
+
+            &.create-board {
+                background-color: var(--primary);
+                color: var(--text);
+            }
+        }
+    }
+
+    .create-project {
+        padding: 10px 20px;
+
+        input {
+            display: block;
+            width: 100%;
+            background-color: transparent;
+            padding: 8px 16px;
+            border-radius: 6px;
+            outline: none;
+            color: var(--text);
+            margin-bottom: 10px;
+            border: 1px solid var(--bg-lines);
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            background-color: var(--primary);
+            border: none;
+            border-radius: 5px;
+            color: var(--text);
+            cursor: pointer;
+
+            &:hover {
+                filter: brightness(1.1);
+            }
+        }
+    }
+}
