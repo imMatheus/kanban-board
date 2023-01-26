@@ -4,12 +4,21 @@
 
         li {
             width: 85%;
+            margin-bottom: 6px;
             padding: 15px 30px;
             border-radius: 0px 15px 15px 0px;
             font-size: 14px;
             font-weight: bold;
             cursor: pointer;
             color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            svg {
+                width: 16px;
+                height: 16px;
+            }
 
             &.active,
             &:hover {

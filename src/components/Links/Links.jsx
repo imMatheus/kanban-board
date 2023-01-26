@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useProject } from '../../context/ProjectContext'
 import './Link.scss'
+import { Layout, Plus } from 'react-feather'
 
 export default function Links() {
     const { projects, currentProject, addNewProject, changeBoard } =
@@ -23,6 +24,7 @@ export default function Links() {
                                 : undefined
                         }
                     >
+                        <Layout />
                         {project.title}
                     </li>
                 ))}
@@ -32,7 +34,8 @@ export default function Links() {
                         setIsOpen((currentValue) => !currentValue)
                     }}
                 >
-                    Create new board +
+                    <Plus />
+                    Create new board
                 </li>
             </ul>
             {isOpen && (
